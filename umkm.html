@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mie Jontor - Pedasnya Nampol!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ea580c, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-gray-900">
+
+    <!-- Navigasi -->
+    <nav class="sticky top-0 z-50 glass-nav border-b border-orange-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-3">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410033/1773187821_3efc9bef.png" 
+                         alt="Logo Mie Jontor" 
+                         class="w-12 h-12 object-contain rounded-full shadow-sm">
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold text-orange-600 tracking-tighter leading-none">MIE JONTOR</span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">By Neng Nay</span>
+                    </div>
+                </div>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-10 font-bold text-sm text-gray-600 uppercase tracking-widest">
+                    <a href="#home" class="hover:text-orange-600 transition-colors">Beranda</a>
+                    <a href="#katalog" class="hover:text-orange-600 transition-colors">Menu</a>
+                    <a href="#kontak" class="hover:text-orange-600 transition-colors">Kontak</a>
+                </div>
+
+                <!-- Tombol Pesan -->
+                <div class="flex items-center">
+                    <a href="https://wa.me/6283168621566?text=halo%20saya%20mau%20pesan" 
+                       class="bg-green-500 hover:bg-green-600 text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg shadow-green-200 transition-all active:scale-95">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span class="hidden sm:inline">Pesan Sekarang</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header id="home" class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
+        <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410033/1773187832_2213edec.png" 
+             alt="Banner Mie Jontor" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
+                Level Pedas <br><span class="text-orange-500">Yang Bikin Nagih!</span>
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl font-medium mb-10 max-w-2xl mx-auto drop-shadow-md">
+                Kelezatan Mie Jontor pilihan Neng Nay dengan bumbu rahasia yang pedasnya beneran nampol.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#katalog" class="w-full sm:w-auto bg-orange-600 text-white px-10 py-4 rounded-full font-extrabold text-lg hover:bg-orange-700 shadow-2xl transition-all hover:scale-105 active:scale-95">
+                    Cek Katalog Menu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kategori & Info -->
+    <section class="py-12 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-xl shadow-inner">
+                    <i class="fas fa-fire-alt"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Kategori</p>
+                    <p class="text-lg font-extrabold text-gray-800">Kuliner</p>
+                </div>
+            </div>
+            <div class="h-10 w-[1px] bg-gray-200 hidden md:block"></div>
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-xl shadow-inner">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Kualitas</p>
+                    <p class="text-lg font-extrabold text-gray-800">Bahan Segar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Produk -->
+    <section id="katalog" class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">Katalog <span class="gradient-text">Menu Utama</span></h2>
+                <div class="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- Produk 1: Mie Jontor -->
+                <div class="product-card group bg-white rounded-[2rem] p-5 shadow-sm border border-orange-50 relative">
+                    <div class="relative h-72 md:h-80 w-full overflow-hidden rounded-[1.5rem] mb-6 shadow-inner">
+                        <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410033/1773188447_1edaa203.jpg" 
+                             alt="Mie Jontor" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+                            Makanan
+                        </div>
+                    </div>
+                    <div class="px-2 pb-2">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-black text-gray-800">Mie Jontor</h3>
+                            <span class="bg-orange-50 text-orange-600 font-black text-xl px-4 py-1 rounded-xl">Rp 10.000</span>
+                        </div>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed">
+                            Mie dengan racikan bumbu rahasia Neng Nay yang super pedas dan gurih. Cocok buat kamu pecinta tantangan!
+                        </p>
+                        <a href="https://wa.me/6283168621566?text=halo%20saya%20mau%20pesan%20Mie%20Jontor" 
+                           class="w-full bg-gray-900 text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-bold hover:bg-orange-600 transition-all">
+                            <i class="fab fa-whatsapp text-xl"></i> Pesan Mie Jontor
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Produk 2: Es Teh Manis -->
+                <div class="product-card group bg-white rounded-[2rem] p-5 shadow-sm border border-blue-50 relative">
+                    <div class="relative h-72 md:h-80 w-full overflow-hidden rounded-[1.5rem] mb-6 bg-stone-50 shadow-inner">
+                        <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410033/1773196526_6974dc6c.png" 
+                             alt="Es Teh Manis" 
+                             class="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-blue-500 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+                            Minuman
+                        </div>
+                    </div>
+                    <div class="px-2 pb-2">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-black text-gray-800">Es Teh Manis</h3>
+                            <span class="bg-blue-50 text-blue-600 font-black text-xl px-4 py-1 rounded-xl">Rp 5.000</span>
+                        </div>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed">
+                            Peredam pedas paling ampuh! Teh manis segar dengan es batu melimpah untuk segarkan harimu.
+                        </p>
+                        <a href="https://wa.me/6283168621566?text=halo%20saya%20mau%20pesan%20Es%20Teh%20Manis" 
+                           class="w-full bg-gray-900 text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-bold hover:bg-blue-500 transition-all">
+                            <i class="fab fa-whatsapp text-xl"></i> Pesan Es Teh Manis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-950 text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+                <!-- Kolom Brand -->
+                <div class="md:col-span-4">
+                    <div class="flex items-center gap-3 mb-8">
+                        <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410033/1773187821_3efc9bef.png" alt="Logo" class="w-14 h-14 object-contain brightness-110">
+                        <div>
+                            <p class="text-2xl font-black text-orange-500 tracking-tighter">Neng Nay</p>
+                            <p class="text-[10px] font-bold text-gray-500 uppercase">Mie Jontor Specialist</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Pelopor mie pedas nikmat di Haurgeulis. Kami menyajikan kelezatan yang konsisten untuk setiap pelanggan kami.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/dnellaaay" class="w-12 h-12 bg-gray-900 border border-gray-800 rounded-2xl flex items-center justify-center hover:bg-orange-600 hover:border-orange-600 transition-all text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/6283168621566" class="w-12 h-12 bg-gray-900 border border-gray-800 rounded-2xl flex items-center justify-center hover:bg-green-600 hover:border-green-600 transition-all text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom Alamat -->
+                <div class="md:col-span-4">
+                    <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-orange-500">Alamat Toko</h4>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 text-orange-500">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            Jln. Sumber mulya Kecamatan Haurgeulis, Indramayu, Jawa Barat.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kolom Layanan -->
+                <div class="md:col-span-4">
+                    <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-orange-500">Jam Operasional</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex justify-between border-b border-gray-900 pb-2">
+                            <span>Senin - Sabtu</span>
+                            <span class="text-white font-bold">10:00 - 21:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-900 pb-2">
+                            <span>Minggu</span>
+                            <span class="text-orange-500 font-bold">Tutup</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-gray-900 text-center">
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-[0.3em]">
+                    &copy; 2024 Neng Nay — All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Mobile -->
+    <div class="md:hidden fixed bottom-8 right-6 z-[60]">
+        <a href="https://wa.me/6283168621566?text=halo%20saya%20mau%20pesan" 
+           class="bg-green-500 text-white w-16 h-16 rounded-[2rem] shadow-2xl shadow-green-400/50 flex items-center justify-center text-3xl animate-bounce">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+</body>
+</html>
+
